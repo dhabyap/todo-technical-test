@@ -19,4 +19,9 @@ class Checklist extends Model
     {
         return $this->hasMany(Item::class);
     }
+
+    public function checklist()
+    {
+        return $this->belongsTo(Checklist::class);
+    }
 }
