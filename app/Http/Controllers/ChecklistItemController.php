@@ -22,7 +22,7 @@ class ChecklistItemController extends Controller
         ]);
 
         $checklist = Checklist::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
-        dd($checklist);
+       
 
         $item = $checklist->items()->create([
             'item_name' => $request->item_name,
